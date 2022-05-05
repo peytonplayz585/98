@@ -262,9 +262,9 @@ Notepad.acceptsFilePaths = true;
 function Paint(file_path) {
 	var $win = make_iframe_window({
 		src: "programs/jspaint/index.html",
-		icons: iconsAtTwoSizes("paint"),
+		icons: iconsAtTwoSizes("Minecraft SinglePlayer"),
 		// NOTE: in Windows 98, "untitled" is lowercase, but TODO: we should just make it consistent
-		title: "untitled - Paint",
+		title: "Minecraft - SinglePlayer",
 		outerWidth: 275,
 		outerHeight: 400,
 		minOuterWidth: 275,
