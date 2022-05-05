@@ -93,7 +93,7 @@ $("html").on("drop", function (event) {
 
 // Despite overflow:hidden on html and body,
 // focusing elements that are partially offscreen can still scroll the page.
-// For example, with opening Minecraft_SinglePlayer and moving it partially offscreen and opening Image > Attributes,
+// For example, with opening Minecraft and moving it partially offscreen and opening Image > Attributes,
 // the default focused button can scroll the entire desktop.
 // We need to prevent (reset) scroll, and also avoid scrollIntoView().
 $(window).on("scroll focusin", () => {
