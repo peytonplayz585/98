@@ -259,12 +259,12 @@ function Notepad(file_path) {
 }
 Notepad.acceptsFilePaths = true;
 
-function Minecraft(file_path) {
+function Paint(file_path) {
 	var $win = make_iframe_window({
 		src: "programs/jspaint/index.html",
-		icons: iconsAtTwoSizes("Minecraft SinglePlayer"),
+		icons: iconsAtTwoSizes("paint"),
 		// NOTE: in Windows 98, "untitled" is lowercase, but TODO: we should just make it consistent
-		title: "Minecraft - SinglePlayer",
+		title: "Minecraft",
 		outerWidth: 275,
 		outerHeight: 400,
 		minOuterWidth: 275,
@@ -376,7 +376,7 @@ function Minecraft(file_path) {
 
 	return new Task($win);
 }
-Minecraft.acceptsFilePaths = true;
+Paint.acceptsFilePaths = true;
 
 function Minesweeper() {
 	var $win = make_iframe_window({
@@ -1038,7 +1038,7 @@ var file_extension_associations = {
 	// Text:
 	"": Notepad, // bare files such as LICENSE, Makefile, CNAME, etc.
 	ahk: Notepad,
-	ai: Minecraft,
+	ai: Paint,
 	bat: Notepad,
 	check_cache: Notepad,
 	cmake: Notepad,
@@ -1077,34 +1077,34 @@ var file_extension_associations = {
 	yml: Notepad,
 
 	// Images:
-	bmp: Minecraft,
-	cur: Minecraft,
-	eps: Minecraft,
-	gif: Minecraft,
-	icns: Minecraft,
-	ico: Minecraft,
-	jpeg: Minecraft,
-	jpg: Minecraft,
-	kra: Minecraft,
-	pbm: Minecraft,
-	pdf: Minecraft, // yes I added storage support to Minecraft(not all formats listed here are supported though)
-	pdn: Minecraft,
-	pgm: Minecraft,
-	png: Minecraft,
-	pnm: Minecraft,
-	ppm: Minecraft,
-	ps: Minecraft,
-	psd: Minecraft,
-	svg: Minecraft,
-	tga: Minecraft,
-	tif: Minecraft,
-	tiff: Minecraft,
-	webp: Minecraft,
-	xbm: Minecraft,
-	xcf: Minecraft,
-	xcfbz2: Minecraft,
-	xcfgz: Minecraft,
-	xpm: Minecraft,
+	bmp: Paint,
+	cur: Paint,
+	eps: Paint,
+	gif: Paint,
+	icns: Paint,
+	ico: Paint,
+	jpeg: Paint,
+	jpg: Paint,
+	kra: Paint,
+	pbm: Paint,
+	pdf: Paint, // yes I added storage support to Minecraft(not all formats listed here are supported though)
+	pdn: Paint,
+	pgm: Paint,
+	png: Paint,
+	pnm: Paint,
+	ppm: Paint,
+	ps: Paint,
+	psd: Paint,
+	svg: Paint,
+	tga: Paint,
+	tif: Paint,
+	tiff: Paint,
+	webp: Paint,
+	xbm: Paint,
+	xcf: Paint,
+	xcfbz2: Paint,
+	xcfgz: Paint,
+	xpm: Paint,
 
 	// Winamp Skins:
 	wsz: openWinamp, // winamp skin zip
@@ -1218,8 +1218,8 @@ add_icon_not_via_filesystem({
 });
 add_icon_not_via_filesystem({
 	title: "Minecraft",
-	iconID: "Minecraft",
-	open: Minecraft,
+	iconID: "Paint",
+	open: Paint,
 	shortcut: true
 });
 add_icon_not_via_filesystem({
