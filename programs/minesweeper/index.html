@@ -2,8 +2,16 @@
 <!-- from https://jonziebell.com/minesweeper/ -->
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>Minesweeper</title>
+		<meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name='url' content="https://g.eags.us/eaglercraft/singleplayer_test/" />
+                <meta name="author" content="LAX1DUDE" />
+                <meta property="og:title" content="Eaglercraft Singleplayer Test" />
+                <meta property="og:locale" content="en-US" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://g.eags.us/eaglercraft/singleplayer_test/" />
+                <meta property="og:image" content="https://g.eags.us/eaglercraft/singleplayer_test/screenshot.png" />
+		<title>Minecraft Singleplayer</title>
 		<link href="../../lib/os-gui/layout.css" rel="stylesheet" type="text/css">
 		<link href="../../lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="../../images/icons/minesweeper-16x16.png" sizes="16x16" type="image/png">
@@ -18,26 +26,51 @@
 		<script src="lib/seedrandom.js"></script>
 		<script src="lib/konami.js"></script>
 		<script src="menus.js"></script>
-		<script src="minesweeper.js"></script>
+	        <script type="text/javascript" src="classes1.js"></script>
 		<script src="tile.js"></script>
 		<script src="face.js"></script>
 		<script src="grid.js"></script>
 		<script src="ssd.js"></script>
 		<script src="fun.js"></script>
-		<style>
-			body, #play_area {
-				margin: 0;
-				padding: 0;
-				background-color: #bdbdbd;
-				margin: auto;
-			}
-			* {
-				image-rendering: crisp-edges;
-				image-rendering: pixelated;
-			}
-		</style>
+		<style type="text/css">
+a.nolink, a.nolink:link, a.nolink:hover, a.nolink:visited {
+	color: white;
+}
+a.nolink:active {
+	color: yellow;
+}
+#available {
+	position: fixed;
+	background-color: #333333;
+	top: 0px;
+	right: 0px;
+	padding: 10px 30px;
+	width:min(80vw,250px); 
+	color:white;
+}
+#available_hide {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	margin: 10px;
+	padding: 2px;
+	font-weight: bold;
+	border: 1px solid white;
+	font-size: 12px;
+	line-height: 12px;
+	cursor: pointer;
+	background-color: #333333;
+}
+</style>
+<script type="text/javascript">
+window.addEventListener("load", function(){
+window.minecraftOpts = [
+	"play_area","assets.epk",
+];
+main();
+});
+</script>
 	</head>
-	<body>
-		<div id="play_area"></div>
+	<body style="margin:0px;width:100vw;height:100vh;" id="play_area">
 	</body>
 </html>
