@@ -259,7 +259,7 @@ function Notepad(file_path) {
 }
 Notepad.acceptsFilePaths = true;
 
-function Minecraft_SinglePlayer(file_path) {
+function Minecraft(file_path) {
 	var $win = make_iframe_window({
 		src: "programs/jspaint/index.html",
 		icons: iconsAtTwoSizes("Minecraft SinglePlayer"),
@@ -345,7 +345,7 @@ function Minecraft_SinglePlayer(file_path) {
 				return;
 			}
 			$help_window = show_help({
-				title: "Minecraft_SinglePlayer Help",
+				title: "Minecraft Help",
 				contentsFile: "programs/jspaint/help/mspaint.hhc",
 				root: "programs/jspaint/help",
 			}).$help_window;
@@ -376,7 +376,7 @@ function Minecraft_SinglePlayer(file_path) {
 
 	return new Task($win);
 }
-Minecraft_SinglePlayer.acceptsFilePaths = true;
+Minecraft.acceptsFilePaths = true;
 
 function Minesweeper() {
 	var $win = make_iframe_window({
@@ -1038,7 +1038,7 @@ var file_extension_associations = {
 	// Text:
 	"": Notepad, // bare files such as LICENSE, Makefile, CNAME, etc.
 	ahk: Notepad,
-	ai: Minecraft_SinglePlayer,
+	ai: Minecraft,
 	bat: Notepad,
 	check_cache: Notepad,
 	cmake: Notepad,
@@ -1077,34 +1077,34 @@ var file_extension_associations = {
 	yml: Notepad,
 
 	// Images:
-	bmp: Minecraft_SinglePlayer,
-	cur: Minecraft_SinglePlayer,
-	eps: Minecraft_SinglePlayer,
-	gif: Minecraft_SinglePlayer,
-	icns: Minecraft_SinglePlayer,
-	ico: Minecraft_SinglePlayer,
-	jpeg: Minecraft_SinglePlayer,
-	jpg: Minecraft_SinglePlayer,
-	kra: Minecraft_SinglePlayer,
-	pbm: Minecraft_SinglePlayer,
-	pdf: Minecraft_SinglePlayer, // yes I added PDF support to Minecraft SinglePlayer (not all formats listed here are supported though)
-	pdn: Minecraft_SinglePlayer,
-	pgm: Minecraft_SinglePlayer,
-	png: Minecraft_SinglePlayer,
-	pnm: Minecraft_SinglePlayer,
-	ppm: Minecraft_SinglePlayer,
-	ps: Minecraft_SinglePlayer,
-	psd: Minecraft_SinglePlayer,
-	svg: Minecraft_SinglePlayer,
-	tga: Minecraft_SinglePlayer,
-	tif: Minecraft_SinglePlayer,
-	tiff: Minecraft_SinglePlayer,
-	webp: Minecraft_SinglePlayer,
-	xbm: Minecraft_SinglePlayer,
-	xcf: Minecraft_SinglePlayer,
-	xcfbz2: Minecraft_SinglePlayer,
-	xcfgz: Minecraft_SinglePlayer,
-	xpm: Minecraft_SinglePlayer,
+	bmp: Minecraft,
+	cur: Minecraft,
+	eps: Minecraft,
+	gif: Minecraft,
+	icns: Minecraft,
+	ico: Minecraft,
+	jpeg: Minecraft,
+	jpg: Minecraft,
+	kra: Minecraft,
+	pbm: Minecraft,
+	pdf: Minecraft, // yes I added storage support to Minecraft(not all formats listed here are supported though)
+	pdn: Minecraft,
+	pgm: Minecraft,
+	png: Minecraft,
+	pnm: Minecraft,
+	ppm: Minecraft,
+	ps: Minecraft,
+	psd: Minecraft,
+	svg: Minecraft,
+	tga: Minecraft,
+	tif: Minecraft,
+	tiff: Minecraft,
+	webp: Minecraft,
+	xbm: Minecraft,
+	xcf: Minecraft,
+	xcfbz2: Minecraft,
+	xcfgz: Minecraft,
+	xpm: Minecraft,
 
 	// Winamp Skins:
 	wsz: openWinamp, // winamp skin zip
@@ -1217,9 +1217,9 @@ add_icon_not_via_filesystem({
 	open: function () { Explorer("https://www.google.com/"); }
 });
 add_icon_not_via_filesystem({
-	title: "Minecraft_SinglePlayer",
-	iconID: "Minecraft_SinglePlayer",
-	open: Minecraft_SinglePlayer,
+	title: "Minecraft",
+	iconID: "Minecraft",
+	open: Minecraft,
 	shortcut: true
 });
 add_icon_not_via_filesystem({
