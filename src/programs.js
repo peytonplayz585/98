@@ -259,7 +259,7 @@ function Notepad(file_path) {
 }
 Notepad.acceptsFilePaths = true;
 
-function Paint(file_path) {
+function Minecraft_SinglePlayer(file_path) {
 	var $win = make_iframe_window({
 		src: "programs/jspaint/index.html",
 		icons: iconsAtTwoSizes("Minecraft SinglePlayer"),
@@ -345,7 +345,7 @@ function Paint(file_path) {
 				return;
 			}
 			$help_window = show_help({
-				title: "Paint Help",
+				title: "Minecraft_SinglePlayer Help",
 				contentsFile: "programs/jspaint/help/mspaint.hhc",
 				root: "programs/jspaint/help",
 			}).$help_window;
@@ -376,7 +376,7 @@ function Paint(file_path) {
 
 	return new Task($win);
 }
-Paint.acceptsFilePaths = true;
+Minecraft_SinglePlayer.acceptsFilePaths = true;
 
 function Minesweeper() {
 	var $win = make_iframe_window({
@@ -1038,7 +1038,7 @@ var file_extension_associations = {
 	// Text:
 	"": Notepad, // bare files such as LICENSE, Makefile, CNAME, etc.
 	ahk: Notepad,
-	ai: Paint,
+	ai: Minecraft_SinglePlayer,
 	bat: Notepad,
 	check_cache: Notepad,
 	cmake: Notepad,
@@ -1077,34 +1077,34 @@ var file_extension_associations = {
 	yml: Notepad,
 
 	// Images:
-	bmp: Paint,
-	cur: Paint,
-	eps: Paint,
-	gif: Paint,
-	icns: Paint,
-	ico: Paint,
-	jpeg: Paint,
-	jpg: Paint,
-	kra: Paint,
-	pbm: Paint,
-	pdf: Paint, // yes I added PDF support to JS Paint (not all formats listed here are supported though)
-	pdn: Paint,
-	pgm: Paint,
-	png: Paint,
-	pnm: Paint,
-	ppm: Paint,
-	ps: Paint,
-	psd: Paint,
-	svg: Paint,
-	tga: Paint,
-	tif: Paint,
-	tiff: Paint,
-	webp: Paint,
-	xbm: Paint,
-	xcf: Paint,
-	xcfbz2: Paint,
-	xcfgz: Paint,
-	xpm: Paint,
+	bmp: Minecraft_SinglePlayer,
+	cur: Minecraft_SinglePlayer,
+	eps: Minecraft_SinglePlayer,
+	gif: Minecraft_SinglePlayer,
+	icns: Minecraft_SinglePlayer,
+	ico: Minecraft_SinglePlayer,
+	jpeg: Minecraft_SinglePlayer,
+	jpg: Minecraft_SinglePlayer,
+	kra: Minecraft_SinglePlayer,
+	pbm: Minecraft_SinglePlayer,
+	pdf: Minecraft_SinglePlayer, // yes I added PDF support to Minecraft SinglePlayer (not all formats listed here are supported though)
+	pdn: Minecraft_SinglePlayer,
+	pgm: Minecraft_SinglePlayer,
+	png: Minecraft_SinglePlayer,
+	pnm: Minecraft_SinglePlayer,
+	ppm: Minecraft_SinglePlayer,
+	ps: Minecraft_SinglePlayer,
+	psd: Minecraft_SinglePlayer,
+	svg: Minecraft_SinglePlayer,
+	tga: Minecraft_SinglePlayer,
+	tif: Minecraft_SinglePlayer,
+	tiff: Minecraft_SinglePlayer,
+	webp: Minecraft_SinglePlayer,
+	xbm: Minecraft_SinglePlayer,
+	xcf: Minecraft_SinglePlayer,
+	xcfbz2: Minecraft_SinglePlayer,
+	xcfgz: Minecraft_SinglePlayer,
+	xpm: Minecraft_SinglePlayer,
 
 	// Winamp Skins:
 	wsz: openWinamp, // winamp skin zip
@@ -1217,9 +1217,9 @@ add_icon_not_via_filesystem({
 	open: function () { Explorer("https://www.google.com/"); }
 });
 add_icon_not_via_filesystem({
-	title: "Paint",
-	iconID: "paint",
-	open: Paint,
+	title: "Minecraft_SinglePlayer",
+	iconID: "Minecraft_SinglePlayer",
+	open: Minecraft_SinglePlayer,
 	shortcut: true
 });
 add_icon_not_via_filesystem({
