@@ -1,7 +1,7 @@
 {
-	"name": "JS Paint",
-	"short_name": "Paint",
-	"description": "An MS Paint remake.",
+	"name": "Minecraft SinglePlayer",
+	"short_name": "Minecraft SinglePlayer",
+	"description": "A Minecraft SinglePlayer Remake.",
 	"categories": ["photo", "utilities", "entertainment"],
 	"display": "standalone",
 	"start_url": ".",
